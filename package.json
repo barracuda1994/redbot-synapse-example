@@ -1,0 +1,27 @@
+{
+  "name": "redbot-synapse-example",
+  "version": "1.0.0",
+  "description": "An example using serial-synapse and serial-synapse-socket with the Sparkfun Redbot for a quick socket controlled robot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlfshell/redbot-synapse-example.git"
+  },
+  "author": {
+    "name": "Keith Chester",
+    "email": "kchester@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hlfshell/redbot-synapse-example/issues"
+  },
+  "homepage": "https://github.com/hlfshell/redbot-synapse-example#readme",
+  "dependencies": {
+    "serial-synapse": "^0.1.4",
+    "serial-synapse-socket": "0.0.1",
+    "serialport": "^3.1.2"
+  }
+}
