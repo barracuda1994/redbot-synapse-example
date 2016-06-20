@@ -15,7 +15,8 @@ enum
 	leftMotor,
 	rightMotor,
 	drive,
-	halt
+	halt,
+	pivot
 };
 
 void setLeftMotor(){
@@ -51,11 +52,21 @@ void haltMotors(){
 	Serial.println(uuid);
 }
 
+void pivotInPlace(){
+	char* uuid = cmdMessenger.readStringArg();
+	int speed = cmdMessenger.readIntArg();
+	
+	motors.pivot(speed);
+	
+	Serial.println(uuid);
+}
+
 void attachCommandCallbacks(){
 	cmdMessenger.attach(leftMotor, setLeftMotor);
-	cmdMessenger.attach(rightMotor, setLeftMotor);
+	cmdMessenger.attach(rightMotor, setRightMotor);
 	cmdMessenger.attach(drive, setDrive);
 	cmdMessenger.attach(halt, haltMotors);
+	cmdMessenger.attach(pivot, pivotInPlace);
 }
 
 void reportAccellerometer(){
