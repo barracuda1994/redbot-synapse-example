@@ -1,6 +1,5 @@
 var SerialSynapse = require("serial-synapse");
 var SynapseServer = require("serial-synapse-socket");
-var SynapseServer = require('../synapse-socket');
 var SerialPort = require('serialport').SerialPort;
 var parsers = require('serialport').parsers;
 
